@@ -27,8 +27,8 @@ namespace ProyectoFinal.Seguridad
                     {
                         while (reader.Read())
                         {
-                            UserCache.CodigoHabitacion = reader.GetInt32(0);
-                            UserCache.CodigoServicio = reader.GetInt32(1);
+                            UserCache.CodigoUsuario = reader.GetInt32(0);
+                            UserCache.CodigoEmpleado = reader.GetInt32(1);
                             UserCache.NombreUsuario = reader.GetString(2);
                             UserCache.Contrasenia = reader.GetString(3);
                             UserCache.Rol = reader.GetString(4);

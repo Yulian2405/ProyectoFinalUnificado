@@ -69,7 +69,9 @@ namespace ProyectoFinal.Presentacion
 
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Deseas cerrar la aplicación", "Advertencia",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Application.Exit();
 
         }
 
@@ -171,6 +173,21 @@ namespace ProyectoFinal.Presentacion
         private void FrmMenuPrincipal1_Load(object sender, EventArgs e)
         {
             LoadUserData();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelFormularios_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void CloseForms(object sender, FormClosedEventArgs e)

@@ -1,13 +1,15 @@
-﻿using System;
+﻿using ProyectoFinal.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ProyectoFinal.Seguridad
 {
@@ -100,5 +102,49 @@ namespace ProyectoFinal.Seguridad
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            if (txtuser.Text != "Username" && txtuser.TextLength > 2)
+            {
+                if (txtpass.Text != "Password")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtuser.Text, txtpass.Text);
+                    if (validLogin == true)
+                    {
+                        FrmMenuPrincipal1 mainMenu = new FrmMenuPrincipal1();
+                        MessageBox.Show("Bienvenido " + UserCache.NombreUsuario + ", " + UserCache.Rol);
+                        mainMenu.Show();
+                        mainMenu.FormClosed += Logout;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        msgError("Usuario o Contraseña incorrecta.");
+                        txtpass.Text = "Password";
+                        txtpass.UseSystemPasswordChar = false;
+                        txtuser.Focus();
+                    }
+                }
+                else msgError("Please enter password.");
+            }
+            else msgError("Please enter username.");
+        }
+        private void msgError(string msg)
+        {
+            lblErrorMessage.Text = "    " + msg;
+            lblErrorMessage.Visible = true;
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtpass.Text = "Password";
+            txtpass.UseSystemPasswordChar = false;
+            txtuser.Text = "Username";
+            lblErrorMessage.Visible = false;
+            this.Show();
+        }
     }
+    
 }
