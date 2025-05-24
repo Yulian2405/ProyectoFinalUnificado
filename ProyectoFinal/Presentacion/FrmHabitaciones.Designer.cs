@@ -35,12 +35,9 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtFechaSistema = new System.Windows.Forms.TextBox();
-            this.txtUsuarioSistema = new System.Windows.Forms.TextBox();
             this.cboxTipo = new System.Windows.Forms.ComboBox();
             this.txtUbicacion = new System.Windows.Forms.TextBox();
             this.txtNumero = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,7 +46,6 @@
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -140,12 +136,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtFechaSistema);
-            this.groupBox1.Controls.Add(this.txtUsuarioSistema);
             this.groupBox1.Controls.Add(this.cboxTipo);
             this.groupBox1.Controls.Add(this.txtUbicacion);
             this.groupBox1.Controls.Add(this.txtNumero);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.txtPrecio);
             this.groupBox1.Controls.Add(this.label7);
@@ -154,7 +147,6 @@
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
@@ -166,24 +158,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1093, 185);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
-            // 
-            // txtFechaSistema
-            // 
-            this.txtFechaSistema.Location = new System.Drawing.Point(659, 110);
-            this.txtFechaSistema.Name = "txtFechaSistema";
-            this.txtFechaSistema.ReadOnly = true;
-            this.txtFechaSistema.Size = new System.Drawing.Size(160, 22);
-            this.txtFechaSistema.TabIndex = 30;
-            this.txtFechaSistema.TextChanged += new System.EventHandler(this.txtFechaSistema_TextChanged);
-            // 
-            // txtUsuarioSistema
-            // 
-            this.txtUsuarioSistema.Location = new System.Drawing.Point(659, 76);
-            this.txtUsuarioSistema.Name = "txtUsuarioSistema";
-            this.txtUsuarioSistema.ReadOnly = true;
-            this.txtUsuarioSistema.Size = new System.Drawing.Size(160, 22);
-            this.txtUsuarioSistema.TabIndex = 29;
-            this.txtUsuarioSistema.TextChanged += new System.EventHandler(this.txtUsuarioSistema_TextChanged);
             // 
             // cboxTipo
             // 
@@ -214,17 +188,6 @@
             this.txtNumero.Size = new System.Drawing.Size(160, 22);
             this.txtNumero.TabIndex = 26;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(434, 112);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 20);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Fecha Sistema:";
-            // 
             // cboxEstado
             // 
             this.cboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -234,7 +197,7 @@
             "Reservada",
             "Ocupada",
             "Bloqueada"});
-            this.cboxEstado.Location = new System.Drawing.Point(659, 41);
+            this.cboxEstado.Location = new System.Drawing.Point(659, 103);
             this.cboxEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(160, 26);
@@ -242,7 +205,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(237, 154);
+            this.txtPrecio.Location = new System.Drawing.Point(659, 47);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.ReadOnly = true;
@@ -254,7 +217,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(8, 155);
+            this.label7.Location = new System.Drawing.Point(430, 48);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
@@ -329,22 +292,11 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(434, 78);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(132, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Usuario Sistema:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(434, 44);
+            this.label5.Location = new System.Drawing.Point(434, 106);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
@@ -417,7 +369,6 @@
         private System.Windows.Forms.Label label10;
         private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label3;
@@ -425,7 +376,6 @@
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
@@ -434,7 +384,5 @@
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.ComboBox cboxTipo;
         private System.Windows.Forms.ComboBox cboxEstado;
-        private System.Windows.Forms.TextBox txtUsuarioSistema;
-        private System.Windows.Forms.TextBox txtFechaSistema;
     }
 }

@@ -106,8 +106,7 @@ namespace ProyectoFinal
             cboxTipo.Text = "";
             txtPrecio.Text = "";
             cboxEstado.Text = "";
-            txtUsuarioSistema.Text = "";
-            txtFechaSistema.Text = "";
+           
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -160,9 +159,7 @@ namespace ProyectoFinal
 
         private void FrmHabitaciones_Load_1(object sender, EventArgs e)
         {
-            lblFecha.Text = cl_habitaciones.MtdFechaHoy().ToString();
-            txtFechaSistema.Text = cl_habitaciones.MtdFechaHoy().ToString();
-            txtUsuarioSistema.Text = "Yulian";
+            lblFecha.Text = cl_habitaciones.MtdFechaHoy().ToString("d");
             MtdConsultarHabitaciones();
 
 
@@ -190,8 +187,7 @@ namespace ProyectoFinal
                 cboxTipo.Text = dgvHabitaciones.SelectedCells[3].Value.ToString();
                 txtPrecio.Text = dgvHabitaciones.SelectedCells[4].Value.ToString();
                 cboxEstado.Text = dgvHabitaciones.SelectedCells[5].Value.ToString();
-                txtUsuarioSistema.Text = dgvHabitaciones.SelectedCells[6].Value.ToString();
-                txtFechaSistema.Text = dgvHabitaciones.SelectedCells[7].Value.ToString();
+                
             }
         }
         private void txtUsuarioSistema_TextChanged(object sender, EventArgs e)
