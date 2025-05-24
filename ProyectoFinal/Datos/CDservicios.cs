@@ -22,7 +22,7 @@ namespace ProyectoFinal.Datos
             return Dt;
         }
 
-        public void MtdAgregarServicios(string Nombre, string Tipo, double Precio, DateTime FechaVigencia, DateTime FechaVencimiento, string Estado, string UsuarioSistema, string FechaSistema)
+        public void MtdAgregarServicios(string Nombre, string Tipo, double Precio, DateTime FechaVigencia, DateTime FechaVencimiento, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
             string QueryAgregar = "Insert into tbl_servicios (Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema) values (@Nombre, @Tipo, @Precio, @FechaVigencia, @FechaVencimiento, @Estado, @UsuarioSistema, @FechaSistema)";
             SqlCommand cmd = new SqlCommand(QueryAgregar, cd_conexion.MtdAbrirConexion());
@@ -38,7 +38,7 @@ namespace ProyectoFinal.Datos
             cd_conexion.MtdCerrarConexion();
         }
 
-        public void MtdActualizarServicios(int CodigoServicio, string Nombre, string Tipo, double Precio, DateTime FechaVigencia, DateTime FechaVencimiento, string Estado, string UsuarioSistema, string FechaSistema)
+        public void MtdActualizarServicios(int CodigoServicio, string Nombre, string Tipo, double Precio, DateTime FechaVigencia, DateTime FechaVencimiento, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
             string QueryAgregar = "Update tbl_servicios set Nombre=@Nombre, Tipo=@Tipo, Precio=@Precio, FechaVigencia=@FechaVigencia, FechaVencimiento=@FechaVencimiento, Estado=@Estado, UsuarioSistema=@UsuarioSistema, FechaSistema=@FechaSistema where CodigoServicio=@CodigoServicio";
             SqlCommand cmd = new SqlCommand(QueryAgregar, cd_conexion.MtdAbrirConexion());

@@ -44,7 +44,7 @@ namespace ProyectoFinal
                     DateTime FechaVencimiento = dtpFechaVencimiento.Value;
                     string Estado = cboxEstado.Text;
                     string UsuarioSistema = "Yulian";
-                    string FechaSistema = txtFechaSistema.Text;
+                    DateTime FechaSistema = cl_servicios.MtdFechaHoy();
 
                     cd_servicios.MtdAgregarServicios(Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema);
                     MessageBox.Show("Servicio agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -61,21 +61,19 @@ namespace ProyectoFinal
         private void FrmServicios_Load(object sender, EventArgs e)
         {
             lblFecha.Text = cl_servicios.MtdFechaHoy().ToString("d");
-            txtUsuarioSistema.Text = "Yulian";
-            txtFechaSistema.Text = cl_servicios.MtdFechaHoy().ToString("d");
             MtdConsultarServicios();
         }
 
         public void MtdLimpiarCampos()
         {
             txtCodigoServicio.Text = "";
+            cboxTipo.Text = " ";
             txtNombre.Text = "";
             txtPrecio.Text = "";
             dtpFechaVigencia.Text = "";
             dtpFechaVencimiento.Text = "";
             cboxEstado.Text = "";
-            txtUsuarioSistema.Text = "";
-            txtFechaSistema.Text = "";
+           
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -129,8 +127,7 @@ namespace ProyectoFinal
                 dtpFechaVigencia.Text = dgvServicios.SelectedCells[4].Value.ToString();
                 dtpFechaVencimiento.Text = dgvServicios.SelectedCells[5].Value.ToString();
                 cboxEstado.Text=dgvServicios.SelectedCells[6].Value.ToString();
-                txtUsuarioSistema.Text = dgvServicios.SelectedCells[7].Value.ToString();
-                txtFechaSistema.Text = dgvServicios.SelectedCells[8].Value.ToString();
+              
 
             }
         }
@@ -149,6 +146,40 @@ namespace ProyectoFinal
             else
             {
                 txtPrecio.Text = cl_servicios.MtdPrecioServicio(cboxTipo.Text).ToString("c");
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txtCodigoServicio.Text) || string.IsNullOrEmpty(txtNombre.Text) || string.IsNullOrEmpty(cboxTipo.Text) || string.IsNullOrEmpty(txtPrecio.Text) ||
+               string.IsNullOrEmpty(dtpFechaVigencia.Text) || string.IsNullOrEmpty(dtpFechaVencimiento.Text) || string.IsNullOrEmpty(cboxEstado.Text))
+            {
+                MessageBox.Show("Favor ingresar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    int CodigoServicio = int.Parse(txtCodigoServicio.Text);
+                    string Nombre = txtNombre.Text;
+                    string Tipo = cboxTipo.Text;
+                    double Precio = cl_servicios.MtdPrecioServicio(Tipo);
+                    DateTime FechaVigencia = dtpFechaVigencia.Value;
+                    DateTime FechaVencimiento = dtpFechaVencimiento.Value;
+                    string Estado = cboxEstado.Text;
+                    string UsuarioSistema = "Yulian";
+                    DateTime FechaSistema = cl_servicios.MtdFechaHoy();
+
+                    cd_servicios.MtdActualizarServicios(CodigoServicio, Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema);
+                    MessageBox.Show("Servicio editado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MtdConsultarServicios();
+                    MtdLimpiarCampos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

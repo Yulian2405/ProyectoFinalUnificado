@@ -34,13 +34,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtFechaSistema = new System.Windows.Forms.TextBox();
-            this.txtUsuarioSistema = new System.Windows.Forms.TextBox();
             this.dtpFechaVigencia = new System.Windows.Forms.DateTimePicker();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.cboxTipo = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -49,7 +46,6 @@
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
-            this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -125,13 +121,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtFechaSistema);
-            this.groupBox1.Controls.Add(this.txtUsuarioSistema);
             this.groupBox1.Controls.Add(this.dtpFechaVigencia);
             this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.dtpFechaVencimiento);
             this.groupBox1.Controls.Add(this.cboxTipo);
-            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtPrecio);
@@ -140,7 +133,6 @@
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnEditar);
             this.groupBox1.Controls.Add(this.btnAgregar);
-            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -153,22 +145,6 @@
             this.groupBox1.Size = new System.Drawing.Size(1093, 185);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
-            // 
-            // txtFechaSistema
-            // 
-            this.txtFechaSistema.Location = new System.Drawing.Point(671, 152);
-            this.txtFechaSistema.Name = "txtFechaSistema";
-            this.txtFechaSistema.ReadOnly = true;
-            this.txtFechaSistema.Size = new System.Drawing.Size(160, 22);
-            this.txtFechaSistema.TabIndex = 29;
-            // 
-            // txtUsuarioSistema
-            // 
-            this.txtUsuarioSistema.Location = new System.Drawing.Point(673, 111);
-            this.txtUsuarioSistema.Name = "txtUsuarioSistema";
-            this.txtUsuarioSistema.ReadOnly = true;
-            this.txtUsuarioSistema.Size = new System.Drawing.Size(160, 22);
-            this.txtUsuarioSistema.TabIndex = 28;
             // 
             // dtpFechaVigencia
             // 
@@ -190,7 +166,7 @@
             // 
             this.dtpFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(673, 42);
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(673, 54);
             this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
             this.dtpFechaVencimiento.Size = new System.Drawing.Size(158, 24);
             this.dtpFechaVencimiento.TabIndex = 5;
@@ -212,17 +188,6 @@
             this.cboxTipo.TabIndex = 2;
             this.cboxTipo.SelectedIndexChanged += new System.EventHandler(this.cboxTipo_SelectedIndexChanged);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(434, 112);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(132, 20);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Usuario Sistema:";
-            // 
             // cboxEstado
             // 
             this.cboxEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -230,7 +195,7 @@
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
             "Inactivo\t"});
-            this.cboxEstado.Location = new System.Drawing.Point(673, 74);
+            this.cboxEstado.Location = new System.Drawing.Point(673, 113);
             this.cboxEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(160, 26);
@@ -307,6 +272,7 @@
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnAgregar
             // 
@@ -324,22 +290,11 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(434, 149);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 20);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Fecha Sistema";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(434, 78);
+            this.label6.Location = new System.Drawing.Point(434, 117);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(63, 20);
@@ -350,7 +305,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(434, 44);
+            this.label5.Location = new System.Drawing.Point(434, 56);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 20);
@@ -419,6 +374,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.groupBox1);
             this.Name = "FrmServicios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmServicios";
             this.Load += new System.EventHandler(this.FrmServicios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).EndInit();
@@ -439,7 +395,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
         private System.Windows.Forms.ComboBox cboxTipo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboxEstado;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtPrecio;
@@ -448,7 +403,6 @@
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -456,8 +410,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.DateTimePicker dtpFechaVigencia;
-        private System.Windows.Forms.TextBox txtUsuarioSistema;
-        private System.Windows.Forms.TextBox txtFechaSistema;
         private FontAwesome.Sharp.IconButton btnEliminar;
     }
 }
