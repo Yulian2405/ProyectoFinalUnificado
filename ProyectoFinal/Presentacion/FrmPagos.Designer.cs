@@ -48,14 +48,14 @@
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
-            this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.cboxCodigoReserva = new System.Windows.Forms.ComboBox();
             this.txtCodigoPago = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnSalir = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPagos)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -265,21 +265,84 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // btnSalir
+            // cboxCodigoReserva
             // 
-            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
-            this.btnSalir.IconColor = System.Drawing.Color.Black;
-            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSalir.IconSize = 25;
-            this.btnSalir.Location = new System.Drawing.Point(1005, 497);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(117, 34);
-            this.btnSalir.TabIndex = 45;
-            this.btnSalir.Text = "Salir";
-            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            this.cboxCodigoReserva.FormattingEnabled = true;
+            this.cboxCodigoReserva.Location = new System.Drawing.Point(133, 83);
+            this.cboxCodigoReserva.Name = "cboxCodigoReserva";
+            this.cboxCodigoReserva.Size = new System.Drawing.Size(121, 24);
+            this.cboxCodigoReserva.TabIndex = 46;
+            this.cboxCodigoReserva.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoReserva_SelectedIndexChanged);
+            // 
+            // txtCodigoPago
+            // 
+            this.txtCodigoPago.Location = new System.Drawing.Point(133, 37);
+            this.txtCodigoPago.Name = "txtCodigoPago";
+            this.txtCodigoPago.ReadOnly = true;
+            this.txtCodigoPago.Size = new System.Drawing.Size(100, 22);
+            this.txtCodigoPago.TabIndex = 47;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.txtCodigoPago);
+            this.groupBox1.Controls.Add(this.cboxCodigoReserva);
+            this.groupBox1.Controls.Add(this.btnCancelar);
+            this.groupBox1.Controls.Add(this.btnEditar);
+            this.groupBox1.Controls.Add(this.btnAgregar);
+            this.groupBox1.Controls.Add(this.txtTPago);
+            this.groupBox1.Controls.Add(this.txtDescuento);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.DtpFechaPago);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.txtImpuesto);
+            this.groupBox1.Controls.Add(this.txtPropina);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtMonto);
+            this.groupBox1.Controls.Add(this.cboxMetodoPago);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(27, 62);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1094, 180);
+            this.groupBox1.TabIndex = 48;
+            this.groupBox1.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(421, 27);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(187, 22);
+            this.label11.TabIndex = 49;
+            this.label11.Text = "MODULO PAGOS";
+            // 
+            // lblFecha
+            // 
+            this.lblFecha.AutoSize = true;
+            this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFecha.Location = new System.Drawing.Point(957, 27);
+            this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFecha.Name = "lblFecha";
+            this.lblFecha.Size = new System.Drawing.Size(122, 20);
+            this.lblFecha.TabIndex = 50;
+            this.lblFecha.Text = "Imprimir Fecha";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(833, 25);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(105, 20);
+            this.label13.TabIndex = 51;
+            this.label13.Text = "Fecha actual:";
             // 
             // btnEliminar
             // 
@@ -297,22 +360,21 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // cboxCodigoReserva
+            // btnSalir
             // 
-            this.cboxCodigoReserva.FormattingEnabled = true;
-            this.cboxCodigoReserva.Location = new System.Drawing.Point(133, 83);
-            this.cboxCodigoReserva.Name = "cboxCodigoReserva";
-            this.cboxCodigoReserva.Size = new System.Drawing.Size(121, 24);
-            this.cboxCodigoReserva.TabIndex = 46;
-            this.cboxCodigoReserva.SelectedIndexChanged += new System.EventHandler(this.cboxCodigoReserva_SelectedIndexChanged);
-            // 
-            // txtCodigoPago
-            // 
-            this.txtCodigoPago.Location = new System.Drawing.Point(133, 37);
-            this.txtCodigoPago.Name = "txtCodigoPago";
-            this.txtCodigoPago.ReadOnly = true;
-            this.txtCodigoPago.Size = new System.Drawing.Size(100, 22);
-            this.txtCodigoPago.TabIndex = 47;
+            this.btnSalir.IconChar = FontAwesome.Sharp.IconChar.PowerOff;
+            this.btnSalir.IconColor = System.Drawing.Color.Black;
+            this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSalir.IconSize = 25;
+            this.btnSalir.Location = new System.Drawing.Point(1005, 497);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(117, 34);
+            this.btnSalir.TabIndex = 45;
+            this.btnSalir.Text = "Salir";
+            this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // groupBox1
             // 
@@ -421,13 +483,13 @@
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private FontAwesome.Sharp.IconButton btnSalir;
-        private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.ComboBox cboxCodigoReserva;
         private System.Windows.Forms.TextBox txtCodigoPago;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label13;
+        private FontAwesome.Sharp.IconButton btnEliminar;
+        private FontAwesome.Sharp.IconButton btnSalir;
     }
 }

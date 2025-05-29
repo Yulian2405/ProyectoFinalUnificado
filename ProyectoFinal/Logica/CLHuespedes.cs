@@ -8,5 +8,9 @@ namespace PROYECTOFINAL._3erSemestre.Logica
 {
     internal class CLHuespedes
     {
+        public DateTime MtdFechaActual()
+        {
+            return DateTime.Now;
+        }
     }
 }

@@ -64,9 +64,11 @@
     <Compile Include="Datos\CDconexion.cs" />
     <Compile Include="Datos\CDhabitaciones.cs" />
     <Compile Include="Datos\CDHuespedes.cs" />
+    <Compile Include="Datos\CDpagoplanillas.cs" />
     <Compile Include="Datos\CDPagos.cs" />
     <Compile Include="Datos\CDservicios.cs" />
     <Compile Include="Logica\CLHuespedes.cs" />
+    <Compile Include="Logica\CLpagoplanillas.cs" />
     <Compile Include="Logica\CLPagos.cs" />
     <Compile Include="Presentacion\FrmHabitaciones.cs">
       <SubType>Form</SubType>
@@ -85,6 +87,12 @@
     </Compile>
     <Compile Include="Presentacion\FrmMenuPrincipal1.Designer.cs">
       <DependentUpon>FrmMenuPrincipal1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPagoPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPagoPlanillas.Designer.cs">
+      <DependentUpon>FrmPagoPlanillas.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmPagos.cs">
       <SubType>Form</SubType>
@@ -120,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMenuPrincipal1.resx">
       <DependentUpon>FrmMenuPrincipal1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPagoPlanillas.resx">
+      <DependentUpon>FrmPagoPlanillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmPagos.resx">
       <DependentUpon>FrmPagos.cs</DependentUpon>
