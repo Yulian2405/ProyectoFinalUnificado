@@ -11,7 +11,7 @@ namespace ProyectoFinal.Datos
     public class CDconexion
     {
                                                                                                    //Base de datos nuestra//
-            private SqlConnection db_conexion = new SqlConnection("Data Source=YULIAN\\SQLEXPRESS;Initial Catalog=db_HotelFinal;Integrated Security=True;Encrypt=False");
+            private SqlConnection db_conexion = new SqlConnection("Data Source=TLXMAX78\\SQLEXPRESS;Initial Catalog=db_HotelFinal;Integrated Security=True;Encrypt=False");
 
             public SqlConnection MtdAbrirConexion()
             {
