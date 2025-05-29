@@ -27,7 +27,7 @@ namespace PROYECTOFINAL._3erSemestre.Presentacion
         {
 
         }
-
+        //Cambios de GITHUB
         private void FrmHuespedes_Load(object sender, EventArgs e)
         {
             lblFecha.Text = cl_huespedes.MtdFechaActual().ToString("dd/MM/yyyy");
