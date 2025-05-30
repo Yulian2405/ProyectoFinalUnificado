@@ -1,4 +1,5 @@
 ﻿using ProyectoFinal.Seguridad;
+using PROYECTOFINAL._3erSemestre.Presentacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -129,6 +130,23 @@ namespace ProyectoFinal.Presentacion
 
         }
 
+        private void btnPagoPlanilla_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmPagoPlanillas>();
+            btnPagoPlanilla.BackColor = Color.FromArgb(12, 61, 92);
+        }
+        private void btnHuespedes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmHuespedes>();
+            btnHuespedes.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmPagos>();
+            btnPagos.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
         private void panelBarraTitulo_Paint(object sender, PaintEventArgs e)
         {
 
@@ -173,12 +191,24 @@ namespace ProyectoFinal.Presentacion
             LoadUserData();
         }
 
+        private void panelFormularios_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["FrmHabitaciones"] == null)
                 btnHabitaciones.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["FrmServicios"] == null)
                 btnServicios.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmPagoPlanillas"] == null)
+                btnPagoPlanilla.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmHuespedes"] == null)
+                btnHuespedes.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmPagos"] == null)
+                btnPagos.BackColor = Color.FromArgb(4, 41, 68);
+
         }
         #endregion
 
