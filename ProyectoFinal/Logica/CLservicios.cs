@@ -8,10 +8,13 @@ namespace ProyectoFinal.Logica
 {
     public class CLservicios
     {
+        /* Para la fecha en pantalla*/
         public DateTime MtdFechaHoy()
         {
             return DateTime.Now;
         }
+
+        /* Para mostrar el precio del servicio*/
 
         public double MtdPrecioServicio(string Tipo)
         {

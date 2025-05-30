@@ -62,14 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\CDconexion.cs" />
+    <Compile Include="Datos\CDEmpleados.cs" />
     <Compile Include="Datos\CDhabitaciones.cs" />
     <Compile Include="Datos\CDHuespedes.cs" />
     <Compile Include="Datos\CDpagoplanillas.cs" />
     <Compile Include="Datos\CDPagos.cs" />
     <Compile Include="Datos\CDservicios.cs" />
+    <Compile Include="Logica\CLEmpleados.cs" />
     <Compile Include="Logica\CLHuespedes.cs" />
     <Compile Include="Logica\CLpagoplanillas.cs" />
     <Compile Include="Logica\CLPagos.cs" />
+    <Compile Include="Presentacion\FrmEmpleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmEmpleados.Designer.cs">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmHabitaciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +128,9 @@
     <Compile Include="Seguridad\UserConnectionToSql.cs" />
     <Compile Include="Seguridad\UserDao.cs" />
     <Compile Include="Seguridad\UserModel.cs" />
+    <EmbeddedResource Include="Presentacion\FrmEmpleados.resx">
+      <DependentUpon>FrmEmpleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmHabitaciones.resx">
       <DependentUpon>FrmHabitaciones.cs</DependentUpon>
     </EmbeddedResource>

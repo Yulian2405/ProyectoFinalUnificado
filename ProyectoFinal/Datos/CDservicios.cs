@@ -12,6 +12,8 @@ namespace ProyectoFinal.Datos
     {
         CDconexion cd_conexion = new CDconexion();
 
+        /* Para consultar tabla tbl_servicios*/
+
         public DataTable MtdConsultarServicios()
         {
             string QueryConsultar = "Select * from tbl_servicios";
@@ -21,6 +23,8 @@ namespace ProyectoFinal.Datos
             cd_conexion.MtdCerrarConexion();
             return Dt;
         }
+
+        /* Para agregar algo de la tabla */
 
         public void MtdAgregarServicios(string Nombre, string Tipo, double Precio, DateTime FechaVigencia, DateTime FechaVencimiento, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
@@ -37,6 +41,8 @@ namespace ProyectoFinal.Datos
             cmd.ExecuteNonQuery();
             cd_conexion.MtdCerrarConexion();
         }
+
+        /* Para editar algo de la tabla */
 
         public void MtdActualizarServicios(int CodigoServicio, string Nombre, string Tipo, double Precio, DateTime FechaVigencia, DateTime FechaVencimiento, string Estado, string UsuarioSistema, DateTime FechaSistema)
         {
@@ -55,6 +61,7 @@ namespace ProyectoFinal.Datos
             cd_conexion.MtdCerrarConexion();
         }
 
+        /* Para eliminar algo de la tabla */
         public void MtdEliminarServicios(int CodigoServicio)
         {
             string QueryEliminar = "Delete from tbl_servicios where CodigoServicio=@CodigoServicio";

@@ -1,6 +1,6 @@
-﻿namespace ProyectoFinal
+﻿namespace ProyectoFinal.Presentacion
 {
-    partial class FrmServicios
+    partial class FrmEmpleados
     {
         /// <summary>
         /// Required designer variable.
@@ -30,29 +30,27 @@
         {
             this.lblFecha = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.dgvServicios = new System.Windows.Forms.DataGridView();
+            this.dgvEmpleados = new System.Windows.Forms.DataGridView();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnEliminar = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpFechaVigencia = new System.Windows.Forms.DateTimePicker();
+            this.dtpFechaContratacion = new System.Windows.Forms.DateTimePicker();
+            this.txtSalario = new System.Windows.Forms.TextBox();
+            this.cboxCargo = new System.Windows.Forms.ComboBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
-            this.cboxTipo = new System.Windows.Forms.ComboBox();
             this.cboxEstado = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtPrecio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtCodigoServicio = new System.Windows.Forms.TextBox();
+            this.txtCodigoEmpleado = new System.Windows.Forms.TextBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnEliminar = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,11 +58,11 @@
             // 
             this.lblFecha.AutoSize = true;
             this.lblFecha.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(925, 25);
+            this.lblFecha.Location = new System.Drawing.Point(923, 20);
             this.lblFecha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(122, 20);
-            this.lblFecha.TabIndex = 38;
+            this.lblFecha.TabIndex = 45;
             this.lblFecha.Text = "Imprimir Fecha";
             // 
             // btnSalir
@@ -73,117 +71,127 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.IconSize = 25;
-            this.btnSalir.Location = new System.Drawing.Point(951, 504);
+            this.btnSalir.Location = new System.Drawing.Point(949, 499);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(4);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(117, 34);
-            this.btnSalir.TabIndex = 36;
+            this.btnSalir.TabIndex = 43;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // dgvServicios
+            // dgvEmpleados
             // 
-            this.dgvServicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvServicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvServicios.Location = new System.Drawing.Point(476, 64);
-            this.dgvServicios.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvServicios.Name = "dgvServicios";
-            this.dgvServicios.ReadOnly = true;
-            this.dgvServicios.RowHeadersWidth = 51;
-            this.dgvServicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvServicios.Size = new System.Drawing.Size(622, 433);
-            this.dgvServicios.TabIndex = 37;
-            this.dgvServicios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvServicios_CellClick);
+            this.dgvEmpleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEmpleados.Location = new System.Drawing.Point(479, 59);
+            this.dgvEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvEmpleados.Name = "dgvEmpleados";
+            this.dgvEmpleados.ReadOnly = true;
+            this.dgvEmpleados.RowHeadersWidth = 51;
+            this.dgvEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvEmpleados.Size = new System.Drawing.Size(636, 415);
+            this.dgvEmpleados.TabIndex = 44;
+            this.dgvEmpleados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmpleados_CellClick);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calisto MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(390, 22);
+            this.label11.Location = new System.Drawing.Point(407, 16);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(223, 22);
-            this.label11.TabIndex = 41;
-            this.label11.Text = "MODULO SERVICIOS";
+            this.label11.Size = new System.Drawing.Size(244, 22);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "MODULO EMPLEADOS";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(801, 23);
+            this.label10.Location = new System.Drawing.Point(799, 18);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(105, 20);
-            this.label10.TabIndex = 39;
+            this.label10.TabIndex = 46;
             this.label10.Text = "Fecha actual:";
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.btnEliminar.IconColor = System.Drawing.Color.Black;
+            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEliminar.IconSize = 25;
+            this.btnEliminar.Location = new System.Drawing.Point(823, 499);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(117, 34);
+            this.btnEliminar.TabIndex = 42;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dtpFechaVigencia);
+            this.groupBox1.Controls.Add(this.dtpFechaContratacion);
+            this.groupBox1.Controls.Add(this.txtSalario);
+            this.groupBox1.Controls.Add(this.cboxCargo);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.dtpFechaVencimiento);
-            this.groupBox1.Controls.Add(this.cboxTipo);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtPrecio);
-            this.groupBox1.Controls.Add(this.cboxEstado);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtCodigoServicio);
+            this.groupBox1.Controls.Add(this.txtCodigoEmpleado);
+            this.groupBox1.Controls.Add(this.cboxEstado);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(20, 45);
+            this.groupBox1.Location = new System.Drawing.Point(18, 40);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(421, 452);
-            this.groupBox1.TabIndex = 40;
+            this.groupBox1.Size = new System.Drawing.Size(435, 434);
+            this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             // 
-            // dtpFechaVigencia
+            // dtpFechaContratacion
             // 
-            this.dtpFechaVigencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaVigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVigencia.Location = new System.Drawing.Point(197, 227);
-            this.dtpFechaVigencia.Name = "dtpFechaVigencia";
-            this.dtpFechaVigencia.Size = new System.Drawing.Size(158, 24);
-            this.dtpFechaVigencia.TabIndex = 27;
+            this.dtpFechaContratacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaContratacion.Location = new System.Drawing.Point(211, 279);
+            this.dtpFechaContratacion.Name = "dtpFechaContratacion";
+            this.dtpFechaContratacion.Size = new System.Drawing.Size(160, 22);
+            this.dtpFechaContratacion.TabIndex = 31;
+            // 
+            // txtSalario
+            // 
+            this.txtSalario.Location = new System.Drawing.Point(211, 204);
+            this.txtSalario.Name = "txtSalario";
+            this.txtSalario.ReadOnly = true;
+            this.txtSalario.Size = new System.Drawing.Size(160, 22);
+            this.txtSalario.TabIndex = 30;
+            // 
+            // cboxCargo
+            // 
+            this.cboxCargo.FormattingEnabled = true;
+            this.cboxCargo.Items.AddRange(new object[] {
+            "Gerente",
+            "Recepcionista",
+            "Botones",
+            "Conserje",
+            "Chef"});
+            this.cboxCargo.Location = new System.Drawing.Point(211, 137);
+            this.cboxCargo.Name = "cboxCargo";
+            this.cboxCargo.Size = new System.Drawing.Size(160, 24);
+            this.cboxCargo.TabIndex = 29;
+            this.cboxCargo.SelectedIndexChanged += new System.EventHandler(this.cboxCargo_SelectedIndexChanged);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(197, 62);
+            this.txtNombre.Location = new System.Drawing.Point(211, 79);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(160, 22);
             this.txtNombre.TabIndex = 26;
-            // 
-            // dtpFechaVencimiento
-            // 
-            this.dtpFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaVencimiento.Location = new System.Drawing.Point(197, 315);
-            this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
-            this.dtpFechaVencimiento.Size = new System.Drawing.Size(158, 24);
-            this.dtpFechaVencimiento.TabIndex = 5;
-            // 
-            // cboxTipo
-            // 
-            this.cboxTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboxTipo.FormattingEnabled = true;
-            this.cboxTipo.Items.AddRange(new object[] {
-            "Comida",
-            "Bebida",
-            "Transporte",
-            "Lavanderia",
-            "Medicina"});
-            this.cboxTipo.Location = new System.Drawing.Point(197, 109);
-            this.cboxTipo.Margin = new System.Windows.Forms.Padding(4);
-            this.cboxTipo.Name = "cboxTipo";
-            this.cboxTipo.Size = new System.Drawing.Size(160, 26);
-            this.cboxTipo.TabIndex = 2;
-            this.cboxTipo.SelectedIndexChanged += new System.EventHandler(this.cboxTipo_SelectedIndexChanged);
             // 
             // cboxEstado
             // 
@@ -191,8 +199,10 @@
             this.cboxEstado.FormattingEnabled = true;
             this.cboxEstado.Items.AddRange(new object[] {
             "Activo",
-            "Inactivo\t"});
-            this.cboxEstado.Location = new System.Drawing.Point(195, 392);
+            "Inactivo",
+            "Suspendido",
+            "Despedido"});
+            this.cboxEstado.Location = new System.Drawing.Point(211, 362);
             this.cboxEstado.Margin = new System.Windows.Forms.Padding(4);
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(160, 26);
@@ -202,42 +212,32 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(12, 232);
+            this.label7.Location = new System.Drawing.Point(21, 281);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 20);
+            this.label7.Size = new System.Drawing.Size(155, 20);
             this.label7.TabIndex = 22;
-            this.label7.Text = "Fecha Vigencia:";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(195, 164);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.ReadOnly = true;
-            this.txtPrecio.Size = new System.Drawing.Size(160, 22);
-            this.txtPrecio.TabIndex = 3;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.label7.Text = "Fecha Contratacion:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 166);
+            this.label3.Location = new System.Drawing.Point(21, 206);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 20);
+            this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Precio:";
+            this.label3.Text = "Salario:";
             // 
-            // txtCodigoServicio
+            // txtCodigoEmpleado
             // 
-            this.txtCodigoServicio.Location = new System.Drawing.Point(197, 19);
-            this.txtCodigoServicio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodigoServicio.Name = "txtCodigoServicio";
-            this.txtCodigoServicio.ReadOnly = true;
-            this.txtCodigoServicio.Size = new System.Drawing.Size(160, 22);
-            this.txtCodigoServicio.TabIndex = 15;
+            this.txtCodigoEmpleado.Location = new System.Drawing.Point(211, 19);
+            this.txtCodigoEmpleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigoEmpleado.Name = "txtCodigoEmpleado";
+            this.txtCodigoEmpleado.ReadOnly = true;
+            this.txtCodigoEmpleado.Size = new System.Drawing.Size(160, 22);
+            this.txtCodigoEmpleado.TabIndex = 15;
             // 
             // btnCancelar
             // 
@@ -245,7 +245,7 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 25;
-            this.btnCancelar.Location = new System.Drawing.Point(314, 504);
+            this.btnCancelar.Location = new System.Drawing.Point(318, 499);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(117, 34);
@@ -261,7 +261,7 @@
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.IconSize = 25;
-            this.btnEditar.Location = new System.Drawing.Point(173, 505);
+            this.btnEditar.Location = new System.Drawing.Point(171, 499);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(117, 34);
@@ -277,7 +277,7 @@
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.IconSize = 25;
-            this.btnAgregar.Location = new System.Drawing.Point(32, 505);
+            this.btnAgregar.Location = new System.Drawing.Point(30, 499);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(117, 34);
@@ -287,44 +287,33 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 395);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 20);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Estado:";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 320);
+            this.label5.Location = new System.Drawing.Point(21, 365);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 20);
+            this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Fecha Vencimiento:";
+            this.label5.Text = "Estado:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 115);
+            this.label4.Location = new System.Drawing.Point(21, 141);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 20);
+            this.label4.Size = new System.Drawing.Size(57, 20);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Tipo:";
+            this.label4.Text = "Cargo:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 64);
+            this.label2.Location = new System.Drawing.Point(21, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 20);
@@ -335,49 +324,32 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calisto MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 19);
+            this.label1.Location = new System.Drawing.Point(21, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 20);
+            this.label1.Size = new System.Drawing.Size(143, 20);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Codigo Servicio:";
+            this.label1.Text = "Codigo Empleado:";
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btnEliminar.IconColor = System.Drawing.Color.Black;
-            this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminar.IconSize = 25;
-            this.btnEliminar.Location = new System.Drawing.Point(825, 504);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(117, 34);
-            this.btnEliminar.TabIndex = 35;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // FrmServicios
+            // FrmEmpleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1132, 560);
+            this.ClientSize = new System.Drawing.Size(1128, 551);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.dgvServicios);
+            this.Controls.Add(this.dgvEmpleados);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.groupBox1);
-            this.Name = "FrmServicios";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmServicios";
-            this.Load += new System.EventHandler(this.FrmServicios_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvServicios)).EndInit();
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnAgregar);
+            this.Name = "FrmEmpleados";
+            this.Text = "FrmEmpleados";
+            this.Load += new System.EventHandler(this.FrmEmpleados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEmpleados)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -389,27 +361,25 @@
 
         private System.Windows.Forms.Label lblFecha;
         private FontAwesome.Sharp.IconButton btnSalir;
-        private System.Windows.Forms.DataGridView dgvServicios;
+        private System.Windows.Forms.DataGridView dgvEmpleados;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
+        private FontAwesome.Sharp.IconButton btnEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
-        private System.Windows.Forms.ComboBox cboxTipo;
+        private System.Windows.Forms.ComboBox cboxCargo;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.ComboBox cboxEstado;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtCodigoServicio;
+        private System.Windows.Forms.TextBox txtCodigoEmpleado;
         private FontAwesome.Sharp.IconButton btnCancelar;
         private FontAwesome.Sharp.IconButton btnEditar;
         private FontAwesome.Sharp.IconButton btnAgregar;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.DateTimePicker dtpFechaVigencia;
-        private FontAwesome.Sharp.IconButton btnEliminar;
+        private System.Windows.Forms.TextBox txtSalario;
+        private System.Windows.Forms.DateTimePicker dtpFechaContratacion;
     }
 }

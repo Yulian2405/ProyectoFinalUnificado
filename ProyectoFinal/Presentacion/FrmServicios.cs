@@ -43,7 +43,7 @@ namespace ProyectoFinal
                     DateTime FechaVigencia = dtpFechaVigencia.Value;
                     DateTime FechaVencimiento = dtpFechaVencimiento.Value;
                     string Estado = cboxEstado.Text;
-                    string UsuarioSistema = "Yulian";
+                    string UsuarioSistema = "Said";
                     DateTime FechaSistema = cl_servicios.MtdFechaHoy();
 
                     cd_servicios.MtdAgregarServicios(Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema);
@@ -168,7 +168,7 @@ namespace ProyectoFinal
                     DateTime FechaVigencia = dtpFechaVigencia.Value;
                     DateTime FechaVencimiento = dtpFechaVencimiento.Value;
                     string Estado = cboxEstado.Text;
-                    string UsuarioSistema = "Yulian";
+                    string UsuarioSistema = "Said";
                     DateTime FechaSistema = cl_servicios.MtdFechaHoy();
 
                     cd_servicios.MtdActualizarServicios(CodigoServicio, Nombre, Tipo, Precio, FechaVigencia, FechaVencimiento, Estado, UsuarioSistema, FechaSistema);
