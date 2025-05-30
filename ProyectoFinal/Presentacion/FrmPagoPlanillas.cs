@@ -75,23 +75,6 @@ namespace ProyectoFinal.Presentacion
             }
             else
             {
-                var SelectedEmpleado = (dynamic)cboxCodigoEmpleado.SelectedItem;
-                int CodigoEmpleado = (int)SelectedEmpleado.Value;
-
-                DateTime FechaPago = dtpFechaPago.Value;
-                double Salario = cl_pagoplanillas.MtdConsultaSalarioEmpleado(CodigoEmpleado);
-                double Bono = cl_pagoplanillas.MtdSalarioBono(Salario);
-                double HorasExtras = double.Parse(txtHorasExtras.Text);
-                double MontoTotal = cl_pagoplanillas.MtdMontoTotal(Salario, Bono, HorasExtras);
-                string Estado = cboxEstado.Text;
-                string UsuarioSistema = "Yulian";
-                DateTime FechaSistema = cl_pagoplanillas.MtdFechaActual();
-
-                cd_pagoplanillas.MtdAgregarPagoPlanillas(CodigoEmpleado, FechaPago, Salario, Bono, HorasExtras, MontoTotal, Estado, UsuarioSistema, FechaSistema);
-                MessageBox.Show("Pago Planilla agregado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MtdConsultarPagoPlanillas();
-                MtdLimpiarCampos();
-                /*
                 try
                 {
                     var SelectedEmpleado = (dynamic)cboxCodigoEmpleado.SelectedItem;
@@ -115,7 +98,6 @@ namespace ProyectoFinal.Presentacion
                 {
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                */
             }
         }
 

@@ -361,3 +361,13 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ProyectoFinal/Datos/CDconexion.cs
+/ProyectoFinal/Datos/CDHuespedes.cs
+/ProyectoFinal/Datos/CDPagos.cs
+/ProyectoFinal/Datos/CDPagos.cs.txt
+/ProyectoFinal/Logica/CLHuespedes.cs
+/ProyectoFinal/Logica/CLPagos.cs
+/ProyectoFinal/Presentacion/FrmHuespedes.cs
+/ProyectoFinal/Presentacion/FrmHuespedes.Designer.cs
+/ProyectoFinal/Presentacion/FrmPagos.cs
+/ProyectoFinal/Datos/CDconexion.cs
