@@ -8,8 +8,8 @@ namespace ProyectoFinal.Seguridad
 {
     internal class UserCache
     {
-        public static int CodigoHabitacion { get; set; }
-        public static int CodigoServicio { get; set; }
+        public static int CodigoUsuario { get; set; }
+        public static int CodigoEmpleado { get; set; }
         public static string NombreUsuario { get; set; }
         public static string Contrasenia { get; set; }
         public static string Rol { get; set; }

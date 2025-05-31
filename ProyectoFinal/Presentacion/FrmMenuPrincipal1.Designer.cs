@@ -33,6 +33,14 @@
             this.panelFormularios = new System.Windows.Forms.Panel();
             this.lblMensajeBienvenida = new System.Windows.Forms.Label();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnEmpleados = new FontAwesome.Sharp.IconButton();
+            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
+            this.btnAsignaciones = new FontAwesome.Sharp.IconButton();
+            this.btnReservaciones = new FontAwesome.Sharp.IconButton();
+            this.btnPagos = new FontAwesome.Sharp.IconButton();
+            this.btnHuespedes = new FontAwesome.Sharp.IconButton();
+            this.btnConsumos = new FontAwesome.Sharp.IconButton();
+            this.btnPagoPlanilla = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCerrarSesion = new System.Windows.Forms.PictureBox();
@@ -51,14 +59,6 @@
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnPagoPlanilla = new FontAwesome.Sharp.IconButton();
-            this.btnConsumos = new FontAwesome.Sharp.IconButton();
-            this.btnHuespedes = new FontAwesome.Sharp.IconButton();
-            this.btnPagos = new FontAwesome.Sharp.IconButton();
-            this.btnReservaciones = new FontAwesome.Sharp.IconButton();
-            this.btnAsignaciones = new FontAwesome.Sharp.IconButton();
-            this.btnUsuarios = new FontAwesome.Sharp.IconButton();
-            this.btnEmpleados = new FontAwesome.Sharp.IconButton();
             this.panelFormularioo.SuspendLayout();
             this.panelFormularios.SuspendLayout();
             this.panelMenu.SuspendLayout();
@@ -129,6 +129,198 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(250, 621);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnEmpleados
+            // 
+            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnEmpleados.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.btnEmpleados.IconColor = System.Drawing.Color.White;
+            this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEmpleados.IconSize = 25;
+            this.btnEmpleados.Location = new System.Drawing.Point(4, 494);
+            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEmpleados.Name = "btnEmpleados";
+            this.btnEmpleados.Size = new System.Drawing.Size(247, 36);
+            this.btnEmpleados.TabIndex = 31;
+            this.btnEmpleados.Text = "Empleados";
+            this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEmpleados.UseVisualStyleBackColor = false;
+            this.btnEmpleados.Click += new System.EventHandler(this.btnEmpleados_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnUsuarios.IconColor = System.Drawing.Color.White;
+            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuarios.IconSize = 25;
+            this.btnUsuarios.Location = new System.Drawing.Point(5, 454);
+            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(247, 36);
+            this.btnUsuarios.TabIndex = 30;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuarios.UseVisualStyleBackColor = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
+            // 
+            // btnAsignaciones
+            // 
+            this.btnAsignaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnAsignaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAsignaciones.FlatAppearance.BorderSize = 0;
+            this.btnAsignaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnAsignaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnAsignaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAsignaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAsignaciones.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAsignaciones.IconChar = FontAwesome.Sharp.IconChar.FaceSmileBeam;
+            this.btnAsignaciones.IconColor = System.Drawing.Color.White;
+            this.btnAsignaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAsignaciones.IconSize = 25;
+            this.btnAsignaciones.Location = new System.Drawing.Point(5, 407);
+            this.btnAsignaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAsignaciones.Name = "btnAsignaciones";
+            this.btnAsignaciones.Size = new System.Drawing.Size(247, 36);
+            this.btnAsignaciones.TabIndex = 29;
+            this.btnAsignaciones.Text = "Asignaciones";
+            this.btnAsignaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAsignaciones.UseVisualStyleBackColor = false;
+            this.btnAsignaciones.Click += new System.EventHandler(this.btnAsignaciones_Click);
+            // 
+            // btnReservaciones
+            // 
+            this.btnReservaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnReservaciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReservaciones.FlatAppearance.BorderSize = 0;
+            this.btnReservaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnReservaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnReservaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservaciones.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReservaciones.IconChar = FontAwesome.Sharp.IconChar.TowerObservation;
+            this.btnReservaciones.IconColor = System.Drawing.Color.White;
+            this.btnReservaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReservaciones.IconSize = 25;
+            this.btnReservaciones.Location = new System.Drawing.Point(5, 362);
+            this.btnReservaciones.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReservaciones.Name = "btnReservaciones";
+            this.btnReservaciones.Size = new System.Drawing.Size(247, 36);
+            this.btnReservaciones.TabIndex = 28;
+            this.btnReservaciones.Text = "Reservaciones";
+            this.btnReservaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnReservaciones.UseVisualStyleBackColor = false;
+            this.btnReservaciones.Click += new System.EventHandler(this.btnReservaciones_Click);
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
+            this.btnPagos.IconColor = System.Drawing.Color.White;
+            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPagos.IconSize = 25;
+            this.btnPagos.Location = new System.Drawing.Point(5, 320);
+            this.btnPagos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(247, 36);
+            this.btnPagos.TabIndex = 27;
+            this.btnPagos.Text = "Pagos";
+            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagos.UseVisualStyleBackColor = false;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            // 
+            // btnHuespedes
+            // 
+            this.btnHuespedes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnHuespedes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHuespedes.FlatAppearance.BorderSize = 0;
+            this.btnHuespedes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnHuespedes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnHuespedes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnHuespedes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuespedes.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnHuespedes.IconChar = FontAwesome.Sharp.IconChar.BedPulse;
+            this.btnHuespedes.IconColor = System.Drawing.Color.White;
+            this.btnHuespedes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnHuespedes.IconSize = 25;
+            this.btnHuespedes.Location = new System.Drawing.Point(4, 278);
+            this.btnHuespedes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHuespedes.Name = "btnHuespedes";
+            this.btnHuespedes.Size = new System.Drawing.Size(247, 36);
+            this.btnHuespedes.TabIndex = 26;
+            this.btnHuespedes.Text = "Huespedes";
+            this.btnHuespedes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHuespedes.UseVisualStyleBackColor = false;
+            this.btnHuespedes.Click += new System.EventHandler(this.btnHuespedes_Click);
+            // 
+            // btnConsumos
+            // 
+            this.btnConsumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnConsumos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsumos.FlatAppearance.BorderSize = 0;
+            this.btnConsumos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnConsumos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnConsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsumos.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnConsumos.IconChar = FontAwesome.Sharp.IconChar.Utensils;
+            this.btnConsumos.IconColor = System.Drawing.Color.White;
+            this.btnConsumos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnConsumos.IconSize = 25;
+            this.btnConsumos.Location = new System.Drawing.Point(5, 234);
+            this.btnConsumos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsumos.Name = "btnConsumos";
+            this.btnConsumos.Size = new System.Drawing.Size(247, 36);
+            this.btnConsumos.TabIndex = 25;
+            this.btnConsumos.Text = "Consumos";
+            this.btnConsumos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnConsumos.UseVisualStyleBackColor = false;
+            this.btnConsumos.Click += new System.EventHandler(this.btnConsumos_Click);
+            // 
+            // btnPagoPlanilla
+            // 
+            this.btnPagoPlanilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.btnPagoPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPagoPlanilla.FlatAppearance.BorderSize = 0;
+            this.btnPagoPlanilla.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.btnPagoPlanilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.btnPagoPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPagoPlanilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPagoPlanilla.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnPagoPlanilla.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
+            this.btnPagoPlanilla.IconColor = System.Drawing.Color.White;
+            this.btnPagoPlanilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPagoPlanilla.IconSize = 25;
+            this.btnPagoPlanilla.Location = new System.Drawing.Point(4, 190);
+            this.btnPagoPlanilla.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPagoPlanilla.Name = "btnPagoPlanilla";
+            this.btnPagoPlanilla.Size = new System.Drawing.Size(247, 36);
+            this.btnPagoPlanilla.TabIndex = 24;
+            this.btnPagoPlanilla.Text = "Pago Planilla";
+            this.btnPagoPlanilla.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPagoPlanilla.UseVisualStyleBackColor = false;
+            this.btnPagoPlanilla.Click += new System.EventHandler(this.btnPagoPlanilla_Click);
             // 
             // panel2
             // 
@@ -367,193 +559,6 @@
             this.btnCerrar.TabIndex = 0;
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click_1);
-            // 
-            // btnPagoPlanilla
-            // 
-            this.btnPagoPlanilla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnPagoPlanilla.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPagoPlanilla.FlatAppearance.BorderSize = 0;
-            this.btnPagoPlanilla.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnPagoPlanilla.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnPagoPlanilla.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPagoPlanilla.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagoPlanilla.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPagoPlanilla.IconChar = FontAwesome.Sharp.IconChar.MoneyBills;
-            this.btnPagoPlanilla.IconColor = System.Drawing.Color.White;
-            this.btnPagoPlanilla.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPagoPlanilla.IconSize = 25;
-            this.btnPagoPlanilla.Location = new System.Drawing.Point(4, 190);
-            this.btnPagoPlanilla.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPagoPlanilla.Name = "btnPagoPlanilla";
-            this.btnPagoPlanilla.Size = new System.Drawing.Size(247, 36);
-            this.btnPagoPlanilla.TabIndex = 24;
-            this.btnPagoPlanilla.Text = "Pago Planilla";
-            this.btnPagoPlanilla.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPagoPlanilla.UseVisualStyleBackColor = false;
-            this.btnPagoPlanilla.Click += new System.EventHandler(this.btnPagoPlanilla_Click);
-            // 
-            // btnConsumos
-            // 
-            this.btnConsumos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnConsumos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsumos.FlatAppearance.BorderSize = 0;
-            this.btnConsumos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnConsumos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnConsumos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnConsumos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsumos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnConsumos.IconChar = FontAwesome.Sharp.IconChar.Utensils;
-            this.btnConsumos.IconColor = System.Drawing.Color.White;
-            this.btnConsumos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnConsumos.IconSize = 25;
-            this.btnConsumos.Location = new System.Drawing.Point(5, 234);
-            this.btnConsumos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsumos.Name = "btnConsumos";
-            this.btnConsumos.Size = new System.Drawing.Size(247, 36);
-            this.btnConsumos.TabIndex = 25;
-            this.btnConsumos.Text = "Consumos";
-            this.btnConsumos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnConsumos.UseVisualStyleBackColor = false;
-            // 
-            // btnHuespedes
-            // 
-            this.btnHuespedes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnHuespedes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHuespedes.FlatAppearance.BorderSize = 0;
-            this.btnHuespedes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnHuespedes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnHuespedes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnHuespedes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuespedes.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnHuespedes.IconChar = FontAwesome.Sharp.IconChar.BedPulse;
-            this.btnHuespedes.IconColor = System.Drawing.Color.White;
-            this.btnHuespedes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnHuespedes.IconSize = 25;
-            this.btnHuespedes.Location = new System.Drawing.Point(4, 278);
-            this.btnHuespedes.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHuespedes.Name = "btnHuespedes";
-            this.btnHuespedes.Size = new System.Drawing.Size(247, 36);
-            this.btnHuespedes.TabIndex = 26;
-            this.btnHuespedes.Text = "Huespedes";
-            this.btnHuespedes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHuespedes.UseVisualStyleBackColor = false;
-            this.btnHuespedes.Click += new System.EventHandler(this.btnHuespedes_Click);
-            // 
-            // btnPagos
-            // 
-            this.btnPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnPagos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPagos.FlatAppearance.BorderSize = 0;
-            this.btnPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagos.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnPagos.IconChar = FontAwesome.Sharp.IconChar.MoneyCheck;
-            this.btnPagos.IconColor = System.Drawing.Color.White;
-            this.btnPagos.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPagos.IconSize = 25;
-            this.btnPagos.Location = new System.Drawing.Point(5, 320);
-            this.btnPagos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(247, 36);
-            this.btnPagos.TabIndex = 27;
-            this.btnPagos.Text = "Pagos";
-            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPagos.UseVisualStyleBackColor = false;
-            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
-            // 
-            // btnReservaciones
-            // 
-            this.btnReservaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnReservaciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReservaciones.FlatAppearance.BorderSize = 0;
-            this.btnReservaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnReservaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnReservaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReservaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReservaciones.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReservaciones.IconChar = FontAwesome.Sharp.IconChar.TowerObservation;
-            this.btnReservaciones.IconColor = System.Drawing.Color.White;
-            this.btnReservaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnReservaciones.IconSize = 25;
-            this.btnReservaciones.Location = new System.Drawing.Point(5, 362);
-            this.btnReservaciones.Margin = new System.Windows.Forms.Padding(4);
-            this.btnReservaciones.Name = "btnReservaciones";
-            this.btnReservaciones.Size = new System.Drawing.Size(247, 36);
-            this.btnReservaciones.TabIndex = 28;
-            this.btnReservaciones.Text = "Reservaciones";
-            this.btnReservaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnReservaciones.UseVisualStyleBackColor = false;
-            // 
-            // btnAsignaciones
-            // 
-            this.btnAsignaciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnAsignaciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAsignaciones.FlatAppearance.BorderSize = 0;
-            this.btnAsignaciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnAsignaciones.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnAsignaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAsignaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAsignaciones.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAsignaciones.IconChar = FontAwesome.Sharp.IconChar.FaceSmileBeam;
-            this.btnAsignaciones.IconColor = System.Drawing.Color.White;
-            this.btnAsignaciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAsignaciones.IconSize = 25;
-            this.btnAsignaciones.Location = new System.Drawing.Point(5, 407);
-            this.btnAsignaciones.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAsignaciones.Name = "btnAsignaciones";
-            this.btnAsignaciones.Size = new System.Drawing.Size(247, 36);
-            this.btnAsignaciones.TabIndex = 29;
-            this.btnAsignaciones.Text = "Asignaciones";
-            this.btnAsignaciones.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAsignaciones.UseVisualStyleBackColor = false;
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsuarios.FlatAppearance.BorderSize = 0;
-            this.btnUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnUsuarios.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnUsuarios.IconColor = System.Drawing.Color.White;
-            this.btnUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuarios.IconSize = 25;
-            this.btnUsuarios.Location = new System.Drawing.Point(5, 454);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(247, 36);
-            this.btnUsuarios.TabIndex = 30;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsuarios.UseVisualStyleBackColor = false;
-            // 
-            // btnEmpleados
-            // 
-            this.btnEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.btnEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEmpleados.FlatAppearance.BorderSize = 0;
-            this.btnEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
-            this.btnEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
-            this.btnEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmpleados.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnEmpleados.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.btnEmpleados.IconColor = System.Drawing.Color.White;
-            this.btnEmpleados.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEmpleados.IconSize = 25;
-            this.btnEmpleados.Location = new System.Drawing.Point(4, 494);
-            this.btnEmpleados.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEmpleados.Name = "btnEmpleados";
-            this.btnEmpleados.Size = new System.Drawing.Size(247, 36);
-            this.btnEmpleados.TabIndex = 31;
-            this.btnEmpleados.Text = "Empleados";
-            this.btnEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnEmpleados.UseVisualStyleBackColor = false;
             // 
             // FrmMenuPrincipal1
             // 

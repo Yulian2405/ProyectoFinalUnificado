@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PROYECTOFINAL._3erSemestre.Presentacion;
+using Sistema_FarmaciaTotal;
 
 namespace ProyectoFinal
 {
@@ -19,7 +20,7 @@ namespace ProyectoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmServicios());
+            Application.Run(new FrmLogin1());
         }
     }
 }

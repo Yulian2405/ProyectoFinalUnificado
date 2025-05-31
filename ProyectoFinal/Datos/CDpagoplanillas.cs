@@ -63,6 +63,25 @@ namespace ProyectoFinal.Datos
             cd_conexion.MtdCerrarConexion();
         }
 
+        public void MtdActualizarPagoPlanillas(int CodigoPagoPlanilla, int CodigoEmpleado, DateTime FechaPago, double Salario, double Bono, double HorasExtras, double MontoTotal, string Estado, string UsuarioSistema, DateTime FechaSistema)
+        {
+            string QueryActualizarPagoPlanillas = "Update tbl_pago_planillas set CodigoEmpleado=@CodigoEmpleado, FechaPago=@FechaPago, Salario=@Salario, Bono=@Bono, HorasExtras=@HorasExtras, MontoTotal=@MontoTotal, Estado=@Estado, UsuarioSistema=@UsuarioSistema, FechaSistema=@FechaSistema where CodigoPagoPlanilla=@CodigoPagoPlanilla"; 
+            SqlCommand cmd = new SqlCommand(QueryActualizarPagoPlanillas, cd_conexion.MtdAbrirConexion());
+            cmd.Parameters.AddWithValue("@CodigoPagoPlanilla", CodigoPagoPlanilla);
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", CodigoEmpleado);
+            cmd.Parameters.AddWithValue("@FechaPago", FechaPago);
+            cmd.Parameters.AddWithValue("@Salario", Salario);
+            cmd.Parameters.AddWithValue("@Bono", Bono);
+            cmd.Parameters.AddWithValue("@HorasExtras", HorasExtras);
+            cmd.Parameters.AddWithValue("@MontoTotal", MontoTotal);
+            cmd.Parameters.AddWithValue("@Estado", Estado);
+            cmd.Parameters.AddWithValue("@UsuarioSistema", UsuarioSistema);
+            cmd.Parameters.AddWithValue("@FechaSistema", FechaSistema);
+
+            cmd.ExecuteNonQuery();
+            cd_conexion.MtdCerrarConexion();
+        }
+
         public void MtdEliminarPagoPlanilla(int CodigoPagoPlanilla)
         {
             string QueryEliminarPagoPlanilla = "Delete tbl_pago_planillas where CodigoPagoPlanilla=@CodigoPagoPlanilla";

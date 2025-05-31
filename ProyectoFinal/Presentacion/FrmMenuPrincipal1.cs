@@ -1,5 +1,7 @@
 ﻿using ProyectoFinal.Seguridad;
 using PROYECTOFINAL._3erSemestre.Presentacion;
+using Sistema_FarmaciaTotal;
+using Sistema_FarmaciaTotal.Presentacion;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -196,6 +198,34 @@ namespace ProyectoFinal.Presentacion
 
         }
 
+        private void btnConsumos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmConsumos>();
+            btnPagoPlanilla.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void btnReservaciones_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmReservaciones>();
+            btnPagoPlanilla.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
+        private void btnAsignaciones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<FrmEmpleados>();
+            btnPagoPlanilla.BackColor = Color.FromArgb(12, 61, 92);
+        }
+
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
             if (Application.OpenForms["FrmHabitaciones"] == null)
@@ -208,6 +238,21 @@ namespace ProyectoFinal.Presentacion
                 btnHuespedes.BackColor = Color.FromArgb(4, 41, 68);
             if (Application.OpenForms["FrmPagos"] == null)
                 btnPagos.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmConsumos"] == null)
+                btnConsumos.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmReservaciones"] == null)
+                btnReservaciones.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmAsignaciones"] == null)
+                btnAsignaciones.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmUsuarios"] == null)
+                btnUsuarios.BackColor = Color.FromArgb(4, 41, 68);
+            if (Application.OpenForms["FrmEmleados"] == null)
+                btnEmpleados.BackColor = Color.FromArgb(4, 41, 68);
+
+
+
+
+
 
         }
         #endregion

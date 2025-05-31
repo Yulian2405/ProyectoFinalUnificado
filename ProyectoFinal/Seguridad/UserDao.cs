@@ -18,7 +18,7 @@ namespace ProyectoFinal.Seguridad
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from tbl_Usuarios where NombreUsuario=@NombreUsuario and Contrasenia=@Contrasenia";
+                    command.CommandText = "select * from tbl_usuarios where NombreUsuario=@NombreUsuario and Contrasenia=@Contrasenia";
                     command.Parameters.AddWithValue("@NombreUsuario", NombreUsuario);
                     command.Parameters.AddWithValue("@Contrasenia", Contrasenia);
                     command.CommandType = CommandType.Text;
@@ -27,8 +27,8 @@ namespace ProyectoFinal.Seguridad
                     {
                         while (reader.Read())
                         {
-                            UserCache.CodigoHabitacion = reader.GetInt32(0);
-                            UserCache.CodigoServicio = reader.GetInt32(1);
+                            UserCache.CodigoUsuario = reader.GetInt32(0);
+                            UserCache.CodigoEmpleado = reader.GetInt32(1);
                             UserCache.NombreUsuario = reader.GetString(2);
                             UserCache.Contrasenia = reader.GetString(3);
                             UserCache.Rol = reader.GetString(4);

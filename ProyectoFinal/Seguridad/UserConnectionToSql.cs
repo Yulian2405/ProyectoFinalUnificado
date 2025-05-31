@@ -12,7 +12,7 @@ namespace ProyectoFinal.Seguridad
         private readonly string connectionString;
         public UserConnectionToSql()
         {
-            connectionString = "Data Source=YULIAN\\SQLEXPRESS;Initial Catalog=db_MenuLogin;Integrated Security=True;Encrypt=False";
+            connectionString = "Data Source=YULIAN\\SQLEXPRESS;Initial Catalog=db_HotelFinal;Integrated Security=True;Encrypt=False";
         }
         protected SqlConnection GetConnection()
         {

@@ -31,7 +31,7 @@ namespace ProyectoFinal.Presentacion
             
         }
 
-        // Metodo que imprime la lista de reservaciones en el combobox
+        // Metodo que imprime la lista de empleados en el combobox
         private void MtdMostrarListaEmpleados()
         {
             var ListaEmpleados = cd_pagoplanillas.MtdListaEmpleado();
@@ -104,7 +104,7 @@ namespace ProyectoFinal.Presentacion
         private void MtdLimpiarCampos()
         {
             txtCodigoPagoPlanilla.Text = "";
-            cboxCodigoEmpleado.SelectedIndex = -1;
+            cboxCodigoEmpleado.Text= " ";
             dtpFechaPago.Text = "";
             txtSalario.Text = "";
             txtBono.Text = "";
@@ -125,14 +125,6 @@ namespace ProyectoFinal.Presentacion
             else
             {
                 txtCodigoPagoPlanilla.Text = dgvPagoPlanillas.SelectedCells[0].Value.ToString();
-                dtpFechaPago.Text = dgvPagoPlanillas.SelectedCells[2].Value.ToString();
-                txtSalario.Text = dgvPagoPlanillas.SelectedCells[3].Value.ToString();
-                txtBono.Text = dgvPagoPlanillas.SelectedCells[4].Value.ToString();
-                txtHorasExtras.Text = dgvPagoPlanillas.SelectedCells[5].Value.ToString();
-                txtMontoTotal.Text = dgvPagoPlanillas.SelectedCells[6].Value.ToString();
-                cboxEstado.Text = dgvPagoPlanillas.SelectedCells[7].Value.ToString();
-
-
 
                 //cboxCodigoEmpleado.Text = dgvPagoPlanillas.SelectedCells[1].Value.ToString();
                 int CodigoEmpleado = (int)dgvPagoPlanillas.SelectedCells[1].Value;
@@ -144,6 +136,13 @@ namespace ProyectoFinal.Presentacion
                         //break;
                     }
                 }
+
+                dtpFechaPago.Text = dgvPagoPlanillas.SelectedCells[2].Value.ToString();
+                txtSalario.Text = dgvPagoPlanillas.SelectedCells[3].Value.ToString();
+                txtBono.Text = dgvPagoPlanillas.SelectedCells[4].Value.ToString();
+                txtHorasExtras.Text = dgvPagoPlanillas.SelectedCells[5].Value.ToString();
+                txtMontoTotal.Text = dgvPagoPlanillas.SelectedCells[6].Value.ToString();
+                cboxEstado.Text = dgvPagoPlanillas.SelectedCells[7].Value.ToString();
 
 
             }
@@ -218,6 +217,42 @@ namespace ProyectoFinal.Presentacion
 
             }
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(cboxCodigoEmpleado.Text) || string.IsNullOrEmpty(dtpFechaPago.Text) || string.IsNullOrEmpty(txtSalario.Text) ||
+                string.IsNullOrEmpty(txtBono.Text) || string.IsNullOrEmpty(txtHorasExtras.Text) || string.IsNullOrEmpty(txtMontoTotal.Text) || string.IsNullOrEmpty(cboxEstado.Text))
+            {
+                MessageBox.Show("Favor completar todos los datos en pantalla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                try
+                {
+                    int CodigoPagoPlanilla = (int.Parse(txtCodigoPagoPlanilla.Text));
+                    var SelectedEmpleado = (dynamic)cboxCodigoEmpleado.SelectedItem;
+                    int CodigoEmpleado = (int)SelectedEmpleado.Value;
+
+                    DateTime FechaPago = dtpFechaPago.Value;
+                    double Salario = cl_pagoplanillas.MtdConsultaSalarioEmpleado(CodigoEmpleado);
+                    double Bono = cl_pagoplanillas.MtdSalarioBono(Salario);
+                    double HorasExtras = double.Parse(txtHorasExtras.Text);
+                    double MontoTotal = cl_pagoplanillas.MtdMontoTotal(Salario, Bono, HorasExtras);
+                    string Estado = cboxEstado.Text;
+                    string UsuarioSistema = "Yulian";
+                    DateTime FechaSistema = cl_pagoplanillas.MtdFechaActual();
+
+                    cd_pagoplanillas.MtdActualizarPagoPlanillas(CodigoPagoPlanilla, CodigoEmpleado, FechaPago, Salario, Bono, HorasExtras, MontoTotal, Estado, UsuarioSistema, FechaSistema);
+                    MessageBox.Show("Pago Planilla actualizado", "Correcto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MtdConsultarPagoPlanillas();
+                    MtdLimpiarCampos();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
     

@@ -48,7 +48,7 @@ namespace ProyectoFinal.Presentacion
                     string Nombre = txtNombre.Text;
                     string Cargo = cboxCargo.Text;
                     double Salario = cl_empleados.MtdSalarioEmpleado(Cargo);
-                    DateTime FechaContratacion = cl_empleados.MtdFechaHoy();
+                    DateTime FechaContratacion = dtpFechaContratacion.Value;
                     string Estado = cboxEstado.Text;
                     string UsuarioSistema = "Said";
                     DateTime FechaSistema = cl_empleados.MtdFechaHoy();
@@ -173,6 +173,11 @@ namespace ProyectoFinal.Presentacion
                     MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void dtpFechaContratacion_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
